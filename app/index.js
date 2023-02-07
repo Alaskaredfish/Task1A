@@ -1,13 +1,12 @@
 const express = require('express');
 const path = require('path');
 const ejs = require('ejs');
-
 const app = express();
 app.use(express.static('public'));
 app.engine('html', ejs.renderFile);
 app.set('view engine', 'html');
 
-const PORT = 8080;
+const PORT = 3000;
 const HOST = '0.0.0.0';
 
 app.get('/', (req, res) => {
